@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon Game</title>
+    <script src="balloon.js"></script>
+</head>
+<body>
+        <script>
+            window.onload = function() {
+                // Taken from Geeks for Geeks
+                // https://www.geeksforgeeks.org/how-to-disable-arrow-key-in-textarea-using-javascript/
+                window.addEventListener('keydown', function(e){
+                    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1){
+                    e.preventDefault();
+                    console.log('hello')
+                    }
+                })
+                var app = new balloon.system.Main();
+                app.start();
+            }
 
+        </script>
+</body>
+</html>
